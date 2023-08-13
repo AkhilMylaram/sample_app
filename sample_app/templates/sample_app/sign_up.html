@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+
+<form action="{% url 'sign_up' %}" method="post">
+    {% csrf_token %}
+   <input  name="username" placeholder="username" ></br>
+    <input  name="password" placeholder="password"></br>
+    <input type="email" name="email" placeholder="abc@gmail.com"></br>
+    <input type="submit" value="signup">
+</form>
+<a href="{% url 'sign_in'%}">click here to sign in </a></br>
+</body>
+</html>

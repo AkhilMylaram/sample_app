@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+</head>
+<body>
+{% csrf_token %}
+<form action="{% url 'sign_in' %}" method="post">
+      {% csrf_token %}
+   <input  name="username" placeholder="username" ></br>
+    <input  name="password" placeholder="password"></br>
+    <input type="submit" value="signin">
+</form>
+<a href="{% url 'sign_up'%}">Create an account </a></br>
+
+{% if message %}
+<li>{{ message }}</li>
+{% endif %}
+</body>
+</html>
